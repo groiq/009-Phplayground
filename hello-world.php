@@ -6,6 +6,10 @@
     <title>Hello World!</title>
   </head>
   <body>
-  <p>Hello World!</p>
+  <p>
+  <?php
+  echo "Hello World!\n";
+  ?>
+  </p>
   </body>
 </html>
