@@ -7,7 +7,7 @@
   </head>
   <body>
   <?php
-  
+  echo "here be php\n";
   ?>
   </body>
 </html>
