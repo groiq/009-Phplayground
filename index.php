@@ -8,23 +8,14 @@
   <body>
   <?php
   
-  // error_reporting(E_WARNING | E_ERROR);
-  // error_reporting(E_ALL);
-  error_reporting(E_STRICT);
-  
-  // echo $test;
-  
-  class Strict {
-      public function test() {
-          echo "test";
-      }
+  function validate(int $param) {
+      echo $param;
   }
   
-  strict::test();
+  validate("hello");
+  validate(2);
   
- 
-  
-  echo "here be php\n";
+
   ?>
  
   </body>
