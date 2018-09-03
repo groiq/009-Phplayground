@@ -8,11 +8,15 @@
   <body>
   <?php
   
-  define("line", "Hello world!");
   
-  echo(line);
-  // line = "99 bottles of beer";
-  echo(line);
+  $races = array("human","elf","dwarf");
+  $charOptions = array("races"=> $races, "professions"=> array("warrior","rogue","mage"));
+
+
+
+  echo("<pre>");
+  print_r($charOptions);
+  echo("</pre>");
   
 
 
