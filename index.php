@@ -12,11 +12,8 @@
   $races = array("human","elf","dwarf");
   $replacement = array("elf"=>"norn","dwarf"=>"asura");
   
-  foreach ($replacement as $pair) {
-      // echo($pair);
-      $old = array_search($pair, $replacement);
-      // echo($old);
-      $races[array_search($old,$races)] = $pair;
+  foreach ($replacement as $old=>$new) {
+      $races[array_search($old,$races)] = $new;
   }
 
 
@@ -24,8 +21,6 @@
   print_r($races);
   echo("</pre>");
   
-
-
   ?>
  
   </body>
