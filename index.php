@@ -9,16 +9,24 @@
   <?php
   
   
-  $races = array("human","elf","dwarf");
-  $replacement = array("elf"=>"norn","dwarf"=>"asura");
+  // $races = array("human","elf","dwarf");
+  // $replacement = array("elf"=>"norn","dwarf"=>"asura");
   
-  foreach ($replacement as $old=>$new) {
-      $races[array_search($old,$races)] = $new;
+  // foreach ($replacement as $old=>$new) {
+      // $races[array_search($old,$races)] = $new;
+  // }
+  $nums = array(1,2,3);
+  foreach($nums as $pos => $num) {
+      // echo($pos);
+      // $num = $num * 2;
+      $nums[$pos] = $num * 2;
   }
+  
 
 
   echo("<pre>");
-  print_r($races);
+  // print_r($races);
+  print_r($nums);
   echo("</pre>");
   
   ?>
