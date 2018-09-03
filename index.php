@@ -10,8 +10,19 @@
   
   // error_reporting(E_WARNING | E_ERROR);
   // error_reporting(E_ALL);
+  error_reporting(E_STRICT);
   
   // echo $test;
+  
+  class Strict {
+      public function test() {
+          echo "test";
+      }
+  }
+  
+  strict::test();
+  
+ 
   
   echo "here be php\n";
   ?>
