@@ -10,12 +10,18 @@
   
   
   $races = array("human","elf","dwarf");
-  $charOptions = array("races"=> $races, "professions"=> array("warrior","rogue","mage"));
-
+  $replacement = array("elf"=>"norn","dwarf"=>"asura");
+  
+  foreach ($replacement as $pair) {
+      // echo($pair);
+      $old = array_search($pair, $replacement);
+      // echo($old);
+      $races[array_search($old,$races)] = $pair;
+  }
 
 
   echo("<pre>");
-  print_r($charOptions);
+  print_r($races);
   echo("</pre>");
   
 
