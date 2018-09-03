@@ -7,6 +7,12 @@
   </head>
   <body>
   <?php
+  
+  // error_reporting(E_WARNING | E_ERROR);
+  // error_reporting(E_ALL);
+  
+  // echo $test;
+  
   echo "here be php\n";
   ?>
  
