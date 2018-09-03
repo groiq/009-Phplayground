@@ -8,13 +8,13 @@
   <body>
   <?php
   
-  function validate(int $param) {
-      echo $param;
-  }
+  define("line", "Hello world!");
   
-  validate("hello");
-  validate(2);
+  echo(line);
+  // line = "99 bottles of beer";
+  echo(line);
   
+
 
   ?>
  
