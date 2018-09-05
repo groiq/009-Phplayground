@@ -12,10 +12,21 @@
       echo("<p>" . $i . "</p>");
   }
   
-  makeParagraph("huhu");
+  $i = "./included.php";
+  
+  for($c = 0; $c < 6; $c++) {
+      makeParagraph($c);
+      if ($c % 2) {
+         include($i);
+      } else {
+          include_once($i);
+      }
+  }
+  
 
   echo("<pre>");
 
+  
   
   echo("</pre>");
   
