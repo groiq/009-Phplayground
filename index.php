@@ -15,6 +15,10 @@
       echo("<p>" . $i . "</p>");
   }
   
+  // Permutation generator
+  
+  $elements = ["a","b","c"];
+  
   
   
   
@@ -23,6 +27,7 @@
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
+  print_r($elements);
   
   echo("</pre>");
   
