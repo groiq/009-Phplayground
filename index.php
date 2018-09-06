@@ -6,6 +6,14 @@
     <title>PHPlayground</title>
   </head>
   <body>
+  
+  <form action="index.php" method="GET">
+  <label for="guess">guess</label>
+  <input type="text" name="guess" />
+  <button type="submit">Submit</button>
+  
+  </form>
+  
   <?php
   
   function say($i) {
@@ -24,9 +32,14 @@
   
   if ($guess === "none") {
       $msg = "no parameter set";
+      $next = "";
+  } elseif($guess === "") {
+      $msg = "input too short";
       $next = "hello";
-     
-  } 
+  } elseif(!is_numeric($guess)) {
+      $msg = "value is not numeric";
+      
+  }
   
   say("Finding: $msg. Let's try this value next: <a href=\"?guess=$next\">$next</a>");
 
@@ -35,6 +48,8 @@
   echo("<pre>");
 
   print_r($_GET);
+  
+  var_dump($_GET);
   
   echo("</pre>");
   
