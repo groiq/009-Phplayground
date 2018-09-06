@@ -7,12 +7,7 @@
   </head>
   <body>
   
-  <form action="index.php" method="GET">
-  <label for="guess">guess</label>
-  <input type="text" name="guess" />
-  <button type="submit">Submit</button>
-  
-  </form>
+ 
   
   <?php
   
@@ -20,49 +15,14 @@
       echo("<p>" . $i . "</p>");
   }
   
-  // say('<a href="?guess=1024">guess</a>');
-  say('<a href="./index.php">go to this site without a $_GET</a>');
-  
-  $wanted = 1024;
-  
-  $guess = $_GET["guess"] ?? "none";
-  $msg = "";
-  $link = "";
   
   
-  if ($guess === "none") {
-      $msg = "no parameter set";
-      $next = "";
-  } elseif($guess === "") {
-      $msg = "input too short";
-      $next = "hello";
-  } elseif(!is_numeric($guess)) {
-      $msg = "value is not numeric";
-      $next = 512;
-  } elseif($guess < $wanted) {
-      $msg = "number too low";
-      $next = 2048;
-  } elseif($guess > $wanted) {
-      $msg = "number too high";
-      $next = 1024;
-  } elseif($guess == $wanted) {
-      $msg = "Hooray!";
-      $next = $guess;
-  } else {
-      $msg = "Ohnoes!!!";
-      $nexxt = "why bother?";
-  }
-      
   
-  say("Finding: $msg. Let's try this value next: <a href=\"?guess=$next\">$next</a>");
-
   
 
   echo("<pre>");
 
-  print_r($_GET);
-  
-  var_dump($_GET);
+  // output arrays here, with print_r or var_dump
   
   echo("</pre>");
   
