@@ -15,13 +15,20 @@
   // say('<a href="?guess=1024">guess</a>');
   say('<a href="./index.php">go to this site without a $_GET</a>');
   
+  $wanted = 1024;
+  
   $guess = $_GET["guess"] ?? "none";
   $msg = "";
   $link = "";
-  $ltext = "";
   
   
+  if ($guess === "none") {
+      $msg = "no parameter set";
+      $next = "hello";
+     
+  } 
   
+  say("Finding: $msg. Let's try this value next: <a href=\"?guess=$next\">$next</a>");
 
   
 
