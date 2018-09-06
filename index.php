@@ -42,7 +42,16 @@
   } elseif($guess < $wanted) {
       $msg = "number too low";
       $next = 2048;
-  } 
+  } elseif($guess > $wanted) {
+      $msg = "number too high";
+      $next = 1024;
+  } elseif($guess == $wanted) {
+      $msg = "Hooray!";
+      $next = $guess;
+  } else {
+      $msg = "Ohnoes!!!";
+      $nexxt = "why bother?";
+  }
       
   
   say("Finding: $msg. Let's try this value next: <a href=\"?guess=$next\">$next</a>");
