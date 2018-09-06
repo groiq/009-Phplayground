@@ -8,25 +8,28 @@
   <body>
   <?php
   
-  function makeParagraph($i) {
+  function say($i) {
       echo("<p>" . $i . "</p>");
   }
   
-  $i = "./included.php";
+  // say('<a href="?guess=1024">guess</a>');
+  say('<a href="./index.php">basic</a>');
   
-  for($c = 0; $c < 6; $c++) {
-      makeParagraph($c);
-      if ($c % 2) {
-         include($i);
-      } else {
-          include_once($i);
-      }
+  if ($_GET) {
+      $guess = $_GET["guess"];
+  } else {
+      say("Missing guess parameter.");
+      say('<a href="?guess=\'hello\'">non-numerical guess param</a>');
+      $guess = null;
   }
+  // $guess = $_GET["guess"];
+  echo($guess);
+
   
 
   echo("<pre>");
 
-  
+  print_r($_GET);
   
   echo("</pre>");
   
