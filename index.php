@@ -19,6 +19,25 @@
   
   function permutations($elements) {
       
+      $elemIsUsed =  array();
+      foreach ($elements as $position) {
+          $elemIsUsed[$position] = 0;
+      }
+      print_r($elemIsUsed);
+      
+      function allValuesForPos($pos) {
+          foreach($elements as $elemPos => $value) {
+              if (! $elemIsUsed[$elemPos] ) {
+                  $elemIsUsed[$elemPos] = 1;
+                  // do more stuff
+                  $elemIsUsed[$elemPos] = 0;
+              }
+          }
+      }
+      
+      allValuesForPos(0);
+
+      
       return $elements;
       
   }
