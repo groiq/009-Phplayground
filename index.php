@@ -12,15 +12,22 @@
       echo("<p>" . $i . "</p>");
   }
   
+  // say('<a href="?guess=1024">guess</a>');
+  say('<a href="./index.php">go to this site without a $_GET</a>');
+  
+  $guess = $_GET["guess"] ?? "none";
+  $msg = "";
+  $link = "";
+  $ltext = "";
+  
+  
+  
 
-  $mixedArray = array();
-  $mixedArray[] = "elf";
-  $mixedArray[] = "rogue";
-  $mixedArray["weapon"] = "longbow";
+  
 
   echo("<pre>");
 
-  print_r($mixedArray);
+  print_r($_GET);
   
   echo("</pre>");
   
