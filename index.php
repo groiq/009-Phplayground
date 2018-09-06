@@ -12,24 +12,15 @@
       echo("<p>" . $i . "</p>");
   }
   
-  // say('<a href="?guess=1024">guess</a>');
-  say('<a href="./index.php">basic</a>');
-  
-  if ($_GET) {
-      $guess = $_GET["guess"];
-  } else {
-      say("Missing guess parameter.");
-      say('<a href="?guess=\'hello\'">non-numerical guess param</a>');
-      $guess = null;
-  }
-  // $guess = $_GET["guess"];
-  echo($guess);
 
-  
+  $mixedArray = array();
+  $mixedArray[] = "elf";
+  $mixedArray[] = "rogue";
+  $mixedArray["weapon"] = "longbow";
 
   echo("<pre>");
 
-  print_r($_GET);
+  print_r($mixedArray);
   
   echo("</pre>");
   
