@@ -15,19 +15,32 @@
       echo("<p>" . $i . "</p>");
   }
   
-  // Permutation generator
+  echo("<h2>Permutation generator</h2>");
+  
+  function permutations($elements) {
+      
+      return $elements;
+      
+  }
+  
+  
+  /*
+  Loop through contents of array.
+  Set up 
+  
+  
+  
+  */
+  
   
   $elements = ["a","b","c"];
-  
-  
-  
-  
   
 
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
   print_r($elements);
+  print_r(permutations($elements));
   
   echo("</pre>");
   
