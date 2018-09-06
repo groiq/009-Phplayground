@@ -38,8 +38,12 @@
       $next = "hello";
   } elseif(!is_numeric($guess)) {
       $msg = "value is not numeric";
+      $next = 512;
+  } elseif($guess < $wanted) {
+      $msg = "number too low";
+      $next = 2048;
+  } 
       
-  }
   
   say("Finding: $msg. Let's try this value next: <a href=\"?guess=$next\">$next</a>");
 
