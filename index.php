@@ -19,8 +19,33 @@
   
   function permutations($elements) {
       
+      $allPermutations = array();
+      say("list of permutations is initialized empty.");
+      print_r($allPermutations);
       
-      return $elements;
+      $permutationBlueprint = array();
+      for ($i=0; $i < sizeof($elements); $i++) {
+          $permutationBlueprint[] = 0;
+      }
+      say("generate a permutation blueprint; list with a slot for each element, each slot is set to a placeholder");
+      print_r($permutationBlueprint);
+      
+      say("I need two lists - one generates the current permutation - the other tracks which elements are already in use --");
+      
+      $allValuesForPos = function($pos) use($elements,$permutationBlueprint,&$allValuesForPos,&$allPermutations) {
+          say("fill pos $pos with each value in succession");
+          
+          foreach($elements as $elemIndex => $element) {
+              
+          }
+          
+      };
+      
+      $allValuesForPos(0);
+      
+      
+      
+      return $allPermutations;
       
   }
   
