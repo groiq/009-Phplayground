@@ -19,53 +19,10 @@
   
   function permutations($elements) {
       
-      $elemIsUsed =  array();
-      foreach ($elements as $position) {
-          // say('$elemIsUsed[$position] = 0;');
-          $elemIsUsed[$position] = 0;
-      }
-      // print_r($elemIsUsed);
       
-      $allValuesForPos = function($pos) use($elemIsUsed,$elements,&$allValuesForPos) {
-          // say("allValuesForPos: fill a given position with each value in succession.");
-          // print_r($elemIsUsed);
-          // print_r($elements);
-          // var_dump($elemIsUsed);
-           foreach($elements as $elemPos => $value) {
-              if ( $elemIsUsed[$value] == 0 ) {
-                  $elemIsUsed[$value] = 1;
-                  say("$value marked as used on position $pos:");
-                  print_r($elemIsUsed);
-                  // say("pos is $pos and element number is " . sizeof($elements));
-                  if ($pos < (sizeof($elements)-1)) {
-                      say("more layers follow");
-                      $allValuesForPos($pos+1);
-                  } else {
-                      say("end reached");
-                  }
-                  // var_dump($elemIsUsed);
-                  // do more stuff
-                  $elemIsUsed[$value] = 0;
-              }
-          } 
-          // say('/allValuesForPos');
-      };
-      
-      $allValuesForPos(0);
-
-      // say("---------------");
       return $elements;
       
   }
-  
-  
-  /*
-  Loop through contents of array.
-  Set up 
-  
-  
-  
-  */
   
   
   $elements = ["a","b","c"];
