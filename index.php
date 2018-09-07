@@ -36,6 +36,12 @@
                   $elemIsUsed[$value] = 1;
                   say("$value marked as used on position $pos:");
                   print_r($elemIsUsed);
+                  // say("pos is $pos and element number is " . sizeof($elements));
+                  if ($pos < (sizeof($elements)-1)) {
+                      say("more layers follow");
+                  } else {
+                      say("end reached");
+                  }
                   // var_dump($elemIsUsed);
                   // do more stuff
                   $elemIsUsed[$value] = 0;
