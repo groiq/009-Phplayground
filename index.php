@@ -26,7 +26,7 @@
       }
       // print_r($elemIsUsed);
       
-      $allValuesForPos = function($pos) use($elemIsUsed,$elements) {
+      $allValuesForPos = function($pos) use($elemIsUsed,$elements,&$allValuesForPos) {
           // say("allValuesForPos: fill a given position with each value in succession.");
           // print_r($elemIsUsed);
           // print_r($elements);
@@ -39,6 +39,7 @@
                   // say("pos is $pos and element number is " . sizeof($elements));
                   if ($pos < (sizeof($elements)-1)) {
                       say("more layers follow");
+                      $allValuesForPos($pos+1);
                   } else {
                       say("end reached");
                   }
