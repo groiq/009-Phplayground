@@ -32,7 +32,7 @@
           // print_r($elements);
           // var_dump($elemIsUsed);
            foreach($elements as $elemPos => $value) {
-              if (! $elemIsUsed[$value] ) {
+              if ( $elemIsUsed[$value] == 0 ) {
                   $elemIsUsed[$value] = 1;
                   say("$value marked as used on position $pos:");
                   print_r($elemIsUsed);
