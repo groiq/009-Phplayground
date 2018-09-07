@@ -36,7 +36,6 @@
                   $elemIsUsed[$value] = 1;
                   say("$value marked as used on position $pos:");
                   print_r($elemIsUsed);
-                  
                   // var_dump($elemIsUsed);
                   // do more stuff
                   $elemIsUsed[$value] = 0;
@@ -71,7 +70,9 @@
   // say("element list:");
   // print_r($elements);
   // say("permutation list:");
-  // print_r(permutations($elements));
+  $permutationList = permutations($elements);
+  // print_r($permutationList);
+  
   
   echo("</pre>");
   
