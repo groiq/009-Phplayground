@@ -47,7 +47,7 @@
       
       $allValuesForPos(0);
 
-      say("---------------");
+      // say("---------------");
       return $elements;
       
   }
@@ -68,8 +68,10 @@
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
+  // say("element list:");
   // print_r($elements);
-  print_r(permutations($elements));
+  // say("permutation list:");
+  // print_r(permutations($elements));
   
   echo("</pre>");
   
