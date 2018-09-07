@@ -15,56 +15,33 @@
       echo("<p>" . $i . "</p>");
   }
   
-  echo("<h2>Permutation generator</h2>");
+  $globalVar = "global variable";
   
-  function permutations($elements) {
+  function outerFunction() {
       
-      $elemIsUsed =  array();
-      foreach ($elements as $position) {
-          $elemIsUsed[$position] = 0;
-      }
-      print_r($elemIsUsed);
+      $outerVar = "outer variable";
       
-      function allValuesForPos($pos) {
-          global $elements, $elemIsUsed;
-          echo("here" . $elemIsUsed);
-          var_dump($elemIsUsed);
-          // echo($elements);
-           foreach($elements as $elemPos => $value) {
-              if (! $elemIsUsed[$elemPos] ) {
-                  $elemIsUsed[$elemPos] = 1;
-                  // var_dump($elemIsUsed);
-                  // do more stuff
-                  $elemIsUsed[$elemPos] = 0;
-              }
-          } 
+      function innerFunction() {
+          $innerVar = "inner variable";
+          say("inner function here");
+          global $globalVar;
+          global $outerVar;
+          say($globalVar);
+          say($outerVar);
+          say($innerVar);
       }
       
-      allValuesForPos(0);
-
-      
-      return $elements;
+      innerFunction();
       
   }
   
-  
-  /*
-  Loop through contents of array.
-  Set up 
-  
-  
-  
-  */
-  
-  
-  $elements = ["a","b","c"];
-  
+  outerFunction();
 
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
-  // print_r($elements);
-  print_r(permutations($elements));
+  
+
   
   echo("</pre>");
   
