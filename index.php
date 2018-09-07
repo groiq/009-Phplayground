@@ -21,17 +21,16 @@
       
       $outerVar = "outer variable";
       
-      function innerFunction() {
+      $innerFunction = function() use($outerVar) {
           $innerVar = "inner variable";
           say("inner function here");
           global $globalVar;
-          global $outerVar;
           say($globalVar);
           say($outerVar);
           say($innerVar);
-      }
+      };
       
-      innerFunction();
+      $innerFunction();
       
   }
   
