@@ -26,13 +26,18 @@
       print_r($elemIsUsed);
       
       function allValuesForPos($pos) {
-          foreach($elements as $elemPos => $value) {
+          global $elements, $elemIsUsed;
+          echo("here" . $elemIsUsed);
+          var_dump($elemIsUsed);
+          // echo($elements);
+           foreach($elements as $elemPos => $value) {
               if (! $elemIsUsed[$elemPos] ) {
                   $elemIsUsed[$elemPos] = 1;
+                  // var_dump($elemIsUsed);
                   // do more stuff
                   $elemIsUsed[$elemPos] = 0;
               }
-          }
+          } 
       }
       
       allValuesForPos(0);
@@ -58,7 +63,7 @@
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
-  print_r($elements);
+  // print_r($elements);
   print_r(permutations($elements));
   
   echo("</pre>");
