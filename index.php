@@ -20,6 +20,11 @@
   
   function permutations($elements) {
       
+      if (gettype($elements) == "string") {
+          say("string");
+          $elements = str_split($elements);
+      }
+      
       $allPermutations = array();
       // print_r($allPermutations);
       // say("list of permutations is initialized empty.");
@@ -63,7 +68,7 @@
                       // foreach($permutationBlueprint as $slot => $bla) {
                           // $permutationBlueprint[$slot] = 0;
                       // }
-                      // say("empty permutation blueprint, just to be clean (actually unnecessary!)");
+                      // say("empty permutation blueprint, just to be clean (actually unnecessary!) (buggy!!!)");
                   }
                   $elemIsUsed[$element] = 0;
               }
@@ -81,8 +86,14 @@
       
   }
   
+  function stringifyPermutations($permutationList) {
+      
+      return $permutationList;
+  }
   
-  $elements = ["a","b","c"];
+  
+  // $elements = ["a","b","c"];
+  $elements = "abc";
   
 
   echo("<pre>");
@@ -92,6 +103,7 @@
   // print_r($elements);
   // say("permutation list:");
   $permutationList = permutations($elements);
+  $permutationList = stringifyPermutations($permutationList);
   print_r($permutationList);
   
   
