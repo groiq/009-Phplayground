@@ -21,7 +21,6 @@
   function permutations($elements) {
       
       if (gettype($elements) == "string") {
-          say("string");
           $elements = str_split($elements);
       }
       
@@ -87,13 +86,24 @@
   }
   
   function stringifyPermutations($permutationList) {
-      
-      return $permutationList;
+      $result = array();
+      foreach($permutationList as $permIndex => $permutation) {
+          // print_r($permutation);
+          $permutationString = "";
+          foreach($permutation as $elemIndex => $element) {
+              $permutationString .= $element;
+          }
+          // say($permutationString);
+          $result[] = $permutationString;
+      }
+      // print_r($result);
+      return $result;
   }
   
   
   // $elements = ["a","b","c"];
   $elements = "abc";
+  
   
 
   echo("<pre>");
