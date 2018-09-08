@@ -102,16 +102,17 @@
   
   
   // $elements = ["a","b","c"];
-  $elements = "abc";
+  $elements = "1234";
   
   
 
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
-  // say("element list:");
-  // print_r($elements);
-  // say("permutation list:");
+  say("element list:");
+  print_r($elements);
+  say("");
+  say("permutation list:");
   $permutationList = permutations($elements);
   $permutationList = stringifyPermutations($permutationList);
   print_r($permutationList);
