@@ -12,7 +12,8 @@
   <?php
   
   function say($i) {
-      echo("<p>" . $i . "</p>");
+      // echo("<p>" . $i . "</p>");
+      echo($i . "\n\n");
   }
   
   echo("<h2>Permutation generator</h2>");
@@ -22,6 +23,13 @@
       $allPermutations = array();
       say("list of permutations is initialized empty.");
       print_r($allPermutations);
+      
+      $elemIsUsed = array();
+      foreach($elements as $position) {
+          $elemIsUsed[$position] = 0;
+      }
+      say("make an array to track whether an element is already assigned to a position.");
+      print_r($elemIsUsed);
       
       $permutationBlueprint = array();
       for ($i=0; $i < sizeof($elements); $i++) {
