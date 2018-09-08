@@ -21,22 +21,22 @@
   function permutations($elements) {
       
       $allPermutations = array();
-      say("list of permutations is initialized empty.");
       print_r($allPermutations);
+      say("list of permutations is initialized empty.");
       
       $elemIsUsed = array();
       foreach($elements as $position) {
           $elemIsUsed[$position] = 0;
       }
-      say("make an array to track whether an element is already assigned to a position.");
       print_r($elemIsUsed);
+      say("make an array to track whether an element is already assigned to a position.");
       
       $permutationBlueprint = array();
       for ($i=0; $i < sizeof($elements); $i++) {
           $permutationBlueprint[] = 0;
       }
-      say("generate a permutation blueprint; list with a slot for each element, each slot is set to a placeholder");
       print_r($permutationBlueprint);
+      say("generate a permutation blueprint; list with a slot for each element, each slot is set to a placeholder");
       
       say("I need two lists - one generates the current permutation - the other tracks which elements are already in use --");
       
