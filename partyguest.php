@@ -7,7 +7,7 @@
   </head>
   <body>
   
-  <h1>Party Gues List Calculator</h1>
+  <h1>Party Guest List Calculator</h1>
   
   <p>
   
