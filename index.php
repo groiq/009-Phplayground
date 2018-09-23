@@ -16,14 +16,15 @@
       echo($i . "\n\n");
   }
   
-  echo("24" . "1");
-  echo("24" + "1");
+  $truthTable = array();
 
   echo("<pre>");
 
   // output arrays here, with print_r or var_dump
   // print_r($elements);
   
+  print_r($truthTable);
+  var_dump($truthTable);
   
   echo("</pre>");
   
