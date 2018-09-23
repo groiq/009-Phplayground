@@ -19,7 +19,10 @@
   $truthTable = array();
   
   for ($i=0; $i<4; $i++) {
-      $truthTable[] = $i;
+      $j = array();
+      $j[] = ($i>1);
+      $j[] = ($i % 2 != 0);
+      $truthTable[] = $j;
   }
 
   echo("<pre>");
