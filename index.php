@@ -22,8 +22,9 @@
 
   // output arrays here, with print_r or var_dump
   // print_r($elements);
-  
+  echo("\nprint_r\n");
   print_r($truthTable);
+  echo("\nvar_dump\n");
   var_dump($truthTable);
   
   echo("</pre>");
